@@ -91,16 +91,7 @@ public:
 	 */
 	int16_t getZAcceleteration();
 	
-	/**
-	 * \brief Converts an ADXL345 acceleration reading into G's
-	 * 
-	 * \param  Raw ADXL345 acceleration reading
-	 * 
-	 * \return float Acceleration in terms of Gs
-	 */
-	float convertRawToFloat(int16_t);
-	
-	
+
 	
 protected:
 
