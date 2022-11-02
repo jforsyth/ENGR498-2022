@@ -100,6 +100,9 @@ void loop() {
   //stop interrupts (execute atomically)
   cli();
 
+  //disable USB interrupts for good measure
+  disableUSBInterrupts();
+
   boolean someCondition = true;
   if (someCondition)
   {
@@ -115,7 +118,9 @@ void loop() {
     //Normally we would re-enable interrupts. However, Arduino sets up lots
     //of interrupts that we would have to turn off for this to work. Right now
     //we're just going to "not wake up" so we can see power levels.
-    //sei();
+    
+    /* FOR THE LAB TO WORK YOU MUST COMMENT OUT THE LINE BELOW! */
+    sei();
 
     //execute the sleep instruction and actually go to sleep
     sleep_cpu();
