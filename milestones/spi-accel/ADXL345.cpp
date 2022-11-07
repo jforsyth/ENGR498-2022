@@ -128,9 +128,3 @@ int16_t ADXL345::getZAcceleteration()
 	
 	return 0;
 }
-
-float ADXL345::convertRawToFloat(int16_t value)
-{
-	
-	return 0;
-}

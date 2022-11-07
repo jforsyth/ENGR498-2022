@@ -126,24 +126,35 @@ void setup() {
   
   //infinite loop if self-test fails
   while(!success){}
+  
+  
+  //initialize serial port
+  Serial.begin(9600);
     
 }
 
 void loop() {
   
+    
   //read x-axis
-  int16_t xAxis=getXAcceleteration();
+  volatile int16_t xAxis=accel.getXAcceleteration();
   
   //read y-axis
-  int16_t yAxis=getYAcceleteration();
+  volatile int16_t yAxis=accel.getYAcceleteration();
   
   //read z-axis
-  int16_t zAxis=getZAcceleteration();
+  volatile int16_t zAxis=accel.getZAcceleteration();
 
-  //your Arduino will hate this but we need to test....
-  int magnitude = sqrt(xAxis*xAxis + yAxis*yAxis + zAxis*zAxis);
-  
-  //result should be ~1g when ADXL345 is not moving
-  float acceleration = convertRawToFloat(magnitude);
+  //your Arduino will hate this but we need to test....(actually on the 32u4 it doesn't calculate this correctly unless all values are long)
+  //256 should be ~1g
+  volatile long magnitude = sqrt((long)xAxis*(long)xAxis + (long)yAxis*(long)yAxis + (long)zAxis*(long)zAxis);
+
+  //print out all the accel data to serial
+  Serial.print(xAxis); Serial.print(",");
+  Serial.print(yAxis); Serial.print(",");
+  Serial.print(zAxis);Serial.print(",");
+  Serial.println(magnitude);
+
+  delay(100);
   
 }
