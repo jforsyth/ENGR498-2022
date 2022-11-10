@@ -61,7 +61,7 @@ while True:
     line = bytes.decode('utf-8')
     line = line.replace('\r', '').replace('\n', '')
     print(line)
-    myFile.write(line)
+    myFile.write(line+"\n")
 
     currentTime = int(time.time())
 
