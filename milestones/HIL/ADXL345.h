@@ -81,7 +81,7 @@ public:
 	 * 
 	 * \return int16_t X-axis acceleration in local units.
 	 */
-	int16_t getXAcceleteration();
+	int16_t getXAcceleration();
 	
 	/**
 	 * \brief Read acceleration from Y-axis. Result is raw reading in local units.
@@ -89,7 +89,7 @@ public:
 	 * 
 	 * \return int16_t Y-axis acceleration in local units.
 	 */
-	int16_t getYAcceleteration();
+	int16_t getYAcceleration();
 	
 	/**
 	 * \brief Read acceleration from Z-axis. Result is raw reading in local units.
@@ -97,7 +97,7 @@ public:
 	 * 
 	 * \return int16_t Z-axis acceleration in local units.
 	 */
-	int16_t getZAcceleteration();
+	int16_t getZAcceleration();
 	
 	/**
 	 * \brief Converts an ADXL345 acceleration reading into G's

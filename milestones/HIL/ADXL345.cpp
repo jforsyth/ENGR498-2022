@@ -135,7 +135,7 @@ void ADXL345::readMultiBytes(uint8_t baseAddress, int num, uint8_t data[])
 	return;
 }
 
-int16_t ADXL345::getXAcceleteration()
+int16_t ADXL345::getXAcceleration()
 {
 	byte x_lower = readRegister(X_DATA_0);
 	byte x_upper = readRegister(X_DATA_1);
@@ -145,7 +145,7 @@ int16_t ADXL345::getXAcceleteration()
 	return xSample;
 }
 
-int16_t ADXL345::getYAcceleteration()
+int16_t ADXL345::getYAcceleration()
 {
 	
 	byte y_lower = readRegister(Y_DATA_0);
@@ -156,7 +156,7 @@ int16_t ADXL345::getYAcceleteration()
 	return ySample;
 }
 
-int16_t ADXL345::getZAcceleteration()
+int16_t ADXL345::getZAcceleration()
 {
 	
 	byte z_lower = readRegister(Z_DATA_0);

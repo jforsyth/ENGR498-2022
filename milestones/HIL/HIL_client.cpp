@@ -42,9 +42,9 @@ void acquire(bool _ONLINE_ENABLE, int16_t& xAxis, int16_t& yAxis, int16_t& zAxis
 	//acquire data from the ADXL345
 	if(_ONLINE_ENABLE==true)
 	{	
-		xAxis = accel.getXAcceleteration();
-		yAxis = accel.getYAcceleteration();
-		zAxis = accel.getZAcceleteration();
+		xAxis = accel.getXAcceleration();
+		yAxis = accel.getYAcceleration();
+		zAxis = accel.getZAcceleration();
 	}
 	
 	//acquire data from the Serial port
