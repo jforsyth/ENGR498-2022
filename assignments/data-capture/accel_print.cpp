@@ -43,6 +43,6 @@ void loop() {
 	Serial.print(",");
 	Serial.println(zAxis);
 	
-	//sample the accel at 50Hz
+	//sample the accel at 200Hz
 	delay(50);
 }
