@@ -3,6 +3,9 @@
 //include header for the ADXL345 class
 #include "ADXL345.h"
 
+//double include in case this is used as ATMEL Studio header
+#include <SPI.h>
+
 //create a static instance of the ADXL345 class
 ADXL345 accel;
 
