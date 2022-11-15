@@ -20,6 +20,7 @@ if ser.is_open == True:
     print("Success!")
 else:
     print("Unable to open port :(")
+    exit(0)
 
 filename = "14_steps.csv"
 
