@@ -35,6 +35,7 @@ if ser.is_open:
     print("Success!")
 else:
     print("Unable to open port :(")
+    exit(0)
 
 print("Running a demo for 10s...")
 startTime = currentTime = int(time.time())
